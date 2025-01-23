@@ -13,14 +13,15 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   url: 'https://i2ae15.github.io',
-  baseUrl: '/git-protocol-doc/',
+  baseUrl: 'git-protocol-doc',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'i27ae15', // Usually your GitHub org/user name.
-  projectName: 'git-protocol', // Usually your repo name.
+  projectName: 'git-protocol-doc', // Usually your repo name.
+  trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -40,7 +41,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/i27ae15/git-protocol',
+            'https://github.com/i27ae15/git-protocol-doc',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -62,7 +63,7 @@ const config: Config = {
         {to: '/docs/objects/blob', label: 'Objects', position: 'left'},
         {to: '/docs/git-protocol/intro', label: 'Git-Protocol', position: 'left'},
         {
-          href: 'https://github.com/i27ae15/git-protocol',
+          href: 'https://github.com/i27ae15/git-protocol-doc',
           label: 'Doc Repository',
           position: 'right',
         },
@@ -76,7 +77,7 @@ const config: Config = {
           items: [
             {
               label: 'Doc Repository',
-              href: 'https://github.com/i27ae15/git-protocol'
+              href: 'https://github.com/i27ae15/git-protocol-doc'
             }
           ]
         },
