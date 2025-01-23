@@ -135,7 +135,7 @@ Perfect, checking the MSB we see that also the next byte is part of the size, so
 have to shift `14`, and so on.
 
 ```
- BYTE_0   -    BYTE_1    -    BYTE_0    -   BYTE_0     -     BYTE_N
+ BYTE_0   -    BYTE_1    -    BYTE_2    -   BYTE_3     -     BYTE_N
 SHIFT(0)  -   SHIFT(7)   -  SHIFT(14)   -  SHIFT(21)   -  SHIFT_(7 * N)
 ```
 
@@ -202,7 +202,7 @@ Result: `SIZE = 0x4FEE` (`0100 1111 1110 1110`, decimal `20462`).
 4. Continue this process for additional bytes, shifting each subsequent byte by `7` more positions than the last:
 
 ```
- BYTE_0    -    BYTE_1    -    BYTE_0    -    BYTE_0    -    BYTE_N
+ BYTE_0    -    BYTE_1    -    BYTE_2    -    BYTE_3    -    BYTE_N
 SHIFT(0)   -   SHIFT(7)   -  SHIFT(14)   -  SHIFT(21)   -  SHIFT_(7 * N)
 ```
 
