@@ -102,7 +102,7 @@ And this converted to decimal equals `238`, and again, the MSB tells us that the
 `255` was possible to be reached just in this step, and we cannot add more than `255` in one byte, so what do we do? We
 shift the next byte, not by 8, but by 7, why 7 ? Because the MSB is not part of the size, so we cannot count it.
 
-We check and the next byte is `1001 1111`, we do the sam procedure, but before combining it to our current size, we shift
+We check and the next byte is `1001 1111`, we do the same procedure, but before combining it to our current size, we shift
 it by 7 positions.
 
 ```
@@ -135,8 +135,8 @@ Perfect, checking the MSB we see that also the next byte is part of the size, so
 have to shift `14`, and so on.
 
 ```
-BYTE_0    -    BYTE_1    -    BYTE_0    -    BYTE_0    -    BYTE_N
-SHIFT(7)  -   SHIFT(14)  -  SHIFT(21)   -  SHIFT(28)   -  SHIFT_(7 * N)
+ BYTE_0   -    BYTE_1    -    BYTE_2    -   BYTE_3     -     BYTE_N
+SHIFT(0)  -   SHIFT(7)   -  SHIFT(14)   -  SHIFT(21)   -  SHIFT_(7 * N)
 ```
 
 In case you need a more straightforward explanation here it is:
@@ -202,8 +202,8 @@ Result: `SIZE = 0x4FEE` (`0100 1111 1110 1110`, decimal `20462`).
 4. Continue this process for additional bytes, shifting each subsequent byte by `7` more positions than the last:
 
 ```
-BYTE_0    -    BYTE_1    -    BYTE_0    -    BYTE_0    -    BYTE_N
-SHIFT(7)  -   SHIFT(14)  -  SHIFT(21)   -  SHIFT(28)   -  SHIFT_(7 * N)
+ BYTE_0    -    BYTE_1    -    BYTE_2    -    BYTE_3    -    BYTE_N
+SHIFT(0)   -   SHIFT(7)   -  SHIFT(14)   -  SHIFT(21)   -  SHIFT_(7 * N)
 ```
 
 </div>
