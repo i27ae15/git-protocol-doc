@@ -10,10 +10,10 @@ const config: Config = {
   favicon: 'img/octopus.jpeg',
 
   // Set the production url of your site here
-  url: 'https://codecrafters.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  url: 'https://i2ae15.github.io',
+  baseUrl: '/git-protocol-doc/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
