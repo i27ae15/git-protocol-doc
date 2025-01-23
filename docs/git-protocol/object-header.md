@@ -135,7 +135,7 @@ Perfect, checking the MSB we see that also the next byte is part of the size, so
 have to shift `14`, and so on.
 
 ```
- BYTE_0    -    BYTE_1    -    BYTE_0    -    BYTE_0    -    BYTE_N
+ BYTE_0   -    BYTE_1    -    BYTE_0    -   BYTE_0     -     BYTE_N
 SHIFT(0)  -   SHIFT(7)   -  SHIFT(14)   -  SHIFT(21)   -  SHIFT_(7 * N)
 ```
 
